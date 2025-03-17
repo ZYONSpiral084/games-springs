@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 <%@ page language="java" contentType="text/html; charset="UTF-8" pageEnconding="UTF-8" %>
-=======
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
->>>>>>> 9fa59cc (Carregando jogo!)
 <%@ taglib uri="jakarta.tags.core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="pt-br">
