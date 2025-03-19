@@ -16,11 +16,10 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "jogos")
-public class Jogo {
+public class Jogo{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-
     @Column(nullable = true)
     private String titulo;
 
@@ -32,37 +31,33 @@ public class Jogo {
     @JoinTable(
         name = "jogos_possuem_plataformas",
         joinColumns = @JoinColumn(name = "id_jogos"),
-        inverseJoinColumns = @JoinColumn(name = "id_plataforma"))
+        inverseJoinColumns = @JoinColumn(name = "id_plataformas"))
     private Set<Plataforma> plataformas = new HashSet<>();
 
     public long getId(){
-        return this.id;
+        return id;
     }
-
     public void setId(long id){
         this.id = id;
     }
-    
-    public String getTitulo(){
-        return this.titulo;
-    }
 
+    public String getTitulo(){
+        return titulo;
+    }
     public void setTitulo(String titulo){
         this.titulo = titulo;
     }
 
     public Categoria getCategoria(){
-        return this.categoria;
+        return categoria;
     }
-
     public void setCategoria(Categoria categoria){
         this.categoria = categoria;
     }
 
     public Set<Plataforma> getPlataformas(){
-        return this.plataformas;
+        return plataformas;
     }
-
     public void setPlataformas(Set<Plataforma> plataformas){
         this.plataformas = plataformas;
     }
