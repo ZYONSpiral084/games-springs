@@ -11,37 +11,38 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.OneToMany;
 
+
 @Entity
 @Table(name = "categorias")
-public class Categoria {
+
+public class Categoria{
     @Id
-    @GeneratedValue (strategy = GenerationType.IDENTITY)
+    @GeneratedValue (strategy =GenerationType.IDENTITY)
     private long id;
-
-    @Column(unique=true, nullable=false)
+    @Column (unique=true, nullable=false)
     private String nome;
-
+    
     @OneToMany(mappedBy = "categoria")
     private Set<Jogo> jogos = new HashSet<>();
 
-    public long getId(){
-        return this.id;
+    public long getId() {
+        return id;
     }
 
-    public void setId(long id){
+    public void setId(long id) {
         this.id = id;
     }
 
     public String getNome(){
-        return this.nome;
+        return nome;
     }
 
     public void setNome(String nome){
         this.nome = nome;
     }
 
-    public Set<Jogo> getJogos() {
-        return this.jogos;
+    public Set<Jogo> getJogos(){
+        return jogos;
     }
 
     public void setJogos(Set<Jogo> jogos){
