@@ -22,4 +22,4 @@ O projeto foi desenvolvido como parte da disciplina de **Programação Multiplat
 
 - **Professor:** Isaque Katahira  
 - **Curso:** 2ºADS AMS  
-- **Aluno/Estudante:** Nycolas Antony Salvego  
+- **Estudante:** Nycolas Antony Salvego  
